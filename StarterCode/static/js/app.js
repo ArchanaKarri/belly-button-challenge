@@ -1,6 +1,6 @@
 // Initialize the page with a default plot.
 function charts(selectedPatientID) {
-    d3.json("samples.json").then((data) => {
+    d3.json("https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json").then((data) => {
       var plottingData = data.samples;
       var subject = plottingData.filter(
         (sampleobject) => sampleobject.id == selectedPatientID
@@ -63,7 +63,7 @@ function charts(selectedPatientID) {
   
   // Demographic Info
   function demo(selectedPatientID) {
-    d3.json("samples.json").then((data) => {
+    d3.json("https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json").then((data) => {
       var MetaData = data.metadata;
       var subject = MetaData.filter(
         (sampleobject) => sampleobject.id == selectedPatientID
@@ -112,7 +112,7 @@ function charts(selectedPatientID) {
   
   // Call the data into the inspector console. 
   function init() {
-    d3.json("samples.json").then(function (data) {
+    d3.json("https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json").then(function (data) {
       console.log("samples.json:", data);
       // Set up the DropDown:
       let DropDown = d3.select(`#selDataset`);
